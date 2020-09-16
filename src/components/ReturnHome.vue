@@ -1,14 +1,14 @@
 <template>
   <span class="go back">
-    <button @click="goBack">go back</button>
+    <button @click="returnHome">Return to main listing</button>
     </span> 
 </template>
 
 <script>
 export default {
 methods: {
-  goBack() {
-    return this.$router.go(-1)
+  returnHome() {
+    return this.$router.push('/')
   }
 }
 }

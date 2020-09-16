@@ -1,16 +1,16 @@
 <template>
-  <section id="about">
-    <GoBack />
+  <section class="about">
+    <ReturnHome />
     <h3>About me</h3>
   </section>
 </template>
 
 <script>
-import GoBack from "../components/GoBack";
+import ReturnHome from "../components/ReturnHome";
 
 export default {
   components: {
-    GoBack,
+    ReturnHome,
   },
 };
 </script>

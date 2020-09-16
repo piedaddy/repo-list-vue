@@ -1,5 +1,7 @@
 <template>
-  <div id="app">
+  <!-- <div id="app" class="mx-5"> -->
+      <div id="app">
+
     <NavBar />
     <!-- <div id="nav">
       <router-link to="/about">About</router-link>

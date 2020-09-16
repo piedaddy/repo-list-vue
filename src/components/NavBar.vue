@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <ul class="nav justify-content-center">
+  <nav class="mt-4 mr-5">
+    <ul class="nav justify-content-end">
       <li class="nav-item">
         <router-link to="/about">About</router-link>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
