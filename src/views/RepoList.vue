@@ -1,6 +1,6 @@
 <template>
   <section class="list">
-    <h1 class="ml-xs-1 ml-md-5">Repository List</h1>
+    <h1 class="ml-3 ml-md-5">Repository List</h1>
     <div class="list-container d-flex flex-wrap justify-content-center">
       <div
         class="list-item d-flex flex-column justify-content-between mb-4 mx-2 p-3 col-sm-5 col-lg-3"
@@ -10,8 +10,8 @@
       >
         <h3>{{item.name}}</h3>
         <span>{{item.description}}</span>
-        <p>
-          <em>{{ item.language ? `Written in ${item.language}`: null}}</em>
+        <p class="lang">
+          {{ item.language ? `Written in ${item.language}`: null}}
         </p>
         <router-link
           class="detail-link"
@@ -40,18 +40,29 @@ export default {
 @import "../scss/custom.scss";
 h1 {
   margin-bottom: 1em;
+  color: $yellow;
+}
+.list-container {
+  background: rgb(61,64,91);
+background: linear-gradient(0deg, rgba(61,64,91,1) 0%, rgba(224, 123, 95, 0.781) 33%);
+  // background-color: $pink;
+    // background-color: $green;
+
 }
 
 .list-item {
-  background-color: lightblue;
+  // border-radius: 0.2em;
 
   h3 {
     height: 3em;
+    margin-bottom: 0;
     overflow: scroll;
+    color: $yellow;
   }
 
-  p {
+  .lang {
     margin-bottom: 0.5em;
+    font-style: italic;
   }
 
   span {
@@ -66,7 +77,11 @@ h1 {
 
   .detail-link {
     align-self: flex-end;
-    color: $primary;
+    color: $green;
+    text-decoration: none;
+  }
+  .detail-link:hover {
+    color: $yellow;
   }
 }
 </style>

@@ -1,7 +1,12 @@
 <template>
-  <section class="about">
+  <section class="about-container">
     <ReturnHome />
-    <h3>About me</h3>
+    <h3 class="ml-5">A little bit about the app!</h3>
+    <div class="about">
+
+        <img src alt="portrait" />
+        <p></p>
+    </div>
   </section>
 </template>
 
@@ -15,5 +20,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+@import "../scss/custom.scss";
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  // background-color: rgba(224, 122, 95, 0.671306);
+  background-color:$pink;
+}
 </style>

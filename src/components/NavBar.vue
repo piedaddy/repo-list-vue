@@ -1,8 +1,8 @@
 <template>
-  <nav class="mt-4 mr-5">
+  <nav class="mt-5 mr-3 mr-md-5">
     <ul class="nav justify-content-end">
       <li class="nav-item">
-        <router-link to="/about">About</router-link>
+        <router-link class="about" to="/about">About</router-link>
       </li>
     </ul>
   </nav>
@@ -13,4 +13,14 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+@import "../scss/custom.scss";
+
+.about {
+  color: $green;
+}
+
+.about:hover {
+  color: $yellow;
+  text-decoration: none;
+}
 </style>
