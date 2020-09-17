@@ -1,7 +1,6 @@
 <template>
   <!-- <div id="app" class="mx-5"> -->
-      <div id="app">
-
+  <div id="app">
     <NavBar />
     <!-- <div id="nav">
       <router-link to="/about">About</router-link>
@@ -22,6 +21,12 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
+@import "./scss/custom.scss";
 
+#app {
+  width: 100vw;
+  height: 100vh;
+  //background-color: $warm-grey;
+}
 </style>

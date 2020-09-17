@@ -11,7 +11,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/list",
     name: "RepoList",
     component: RepoList,
     props: true
@@ -28,7 +28,7 @@ const routes = [
     component: About
   },
   {
-    path: "/search",
+    path: "/",
     name: "search",
     component: Search
   },

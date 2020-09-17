@@ -1,7 +1,7 @@
 <template>
   <section class="ml-md-5">
     <ReturnHome />
-    <h3 class="mx-3 pb-3">
+    <h3 class="mx-3 pb-3 mt-3 mt-md-0">
       {{this.repoName}}'s
       <small>details</small>
     </h3>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+// import { mapActions } from "vuex";
 import ReturnHome from "../components/ReturnHome";
 import moment from "moment";
 
@@ -49,16 +49,21 @@ export default {
     commits() {
       return this.$store.state.commits;
     },
+    userName() {
+      return this.$store.state.userName;
+    }
   },
   methods: {
-    ...mapActions(["getRepoBranches", "getRepoCommits"]),
+    // ...mapActions(["getRepoBranches", "getRepoCommits"]), why is this here lol
     getDate: function (date) {
       return moment(date).format("MMMM Do YYYY [at] h:mm:ss a");
     },
   },
   mounted() {
-    this.$store.dispatch("getRepoBranches", this.repoName, this.userName);
-    this.$store.dispatch("getRepoCommits", this.repoName, this.userName);
+    const payload = {repoName: this.repoName, userName: this.userName}
+    this.$store.dispatch("getRepoBranches", payload)
+    this.$store.dispatch("getRepoCommits", payload);
+    console.log('username', this.userName)
   },
 };
 </script>

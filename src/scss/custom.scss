@@ -1,10 +1,11 @@
 // $primary: pink;
-$eggshell: #F4F1DE;
-$pink: #E07A5F;
-$warm-grey: #3D405B;
-$green: #81B29A;
-$yellow: #F2CC8F;
-
+$eggshell: #f4f1de;
+$pink: #e07a5f;
+$warm-grey: #3d405b;
+$green: #81b29a;
+$green-trans: #81b29a63;
+$yellow: #f2cc8f;
+$grey: #636896;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -13,10 +14,23 @@ $yellow: #F2CC8F;
   padding: 0;
   box-sizing: border-box;
   // width: 100%;
-  background-color: $warm-grey;
+   background-color: $warm-grey;
   color: $eggshell;
   // font-family: 'Hind', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
 
+.button {
+  background-color: $green;
+  border: none;
+  box-shadow: 2px 1px 3px $green-trans;
+  color: $warm-grey;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
 
+.button:hover {
+  background-color: $yellow;
+  color: $warm-grey;
 }
