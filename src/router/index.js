@@ -4,6 +4,7 @@ import RepoList from "../views/RepoList";
 import RepoDetail from "../views/RepoDetail.vue";
 import About from "../views/About.vue";
 import PageNotFound from "../views/PageNotFound.vue";
+import Search from "../views/Search.vue";
 
 
 Vue.use(VueRouter);
@@ -25,6 +26,11 @@ const routes = [
     path: "/about",
     name: "about",
     component: About
+  },
+  {
+    path: "/search",
+    name: "search",
+    component: Search
   },
   {
     path: "*",

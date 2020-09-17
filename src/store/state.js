@@ -1,5 +1,6 @@
 export default {
   list: [],
   branches: [],
-  commits: []
+  commits: [],
+  userName: ""
 }

@@ -26,7 +26,7 @@ export default {
     color: $warm-grey;
     font-size: 0.7em;
     font-weight: bold;
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
   }
 
   button:hover {

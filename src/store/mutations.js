@@ -9,3 +9,7 @@ export const SET_REPO_BRANCHES = (state, branches) => {
 export const SET_REPO_COMMITS = (state, commits) => {
   state.commits = commits
 }
+
+export const SET_USER_NAME = (state, userName) => {
+  state.userName = userName
+}

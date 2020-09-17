@@ -2,7 +2,7 @@
   <nav class="mt-5 mr-3 mr-md-5">
     <ul class="nav justify-content-end">
       <li class="nav-item">
-        <router-link class="about" to="/about">About</router-link>
+        <router-link class="about" to="/about">Curious?</router-link>
       </li>
     </ul>
   </nav>

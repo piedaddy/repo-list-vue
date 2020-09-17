@@ -57,8 +57,8 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch("getRepoBranches", this.repoName);
-    this.$store.dispatch("getRepoCommits", this.repoName);
+    this.$store.dispatch("getRepoBranches", this.repoName, this.userName);
+    this.$store.dispatch("getRepoCommits", this.repoName, this.userName);
   },
 };
 </script>

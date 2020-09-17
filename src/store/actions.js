@@ -1,11 +1,12 @@
 import axios from "axios";
-const repoListURL = "https://api.github.com/users/Inza/repos";
+// const repoListURL = "https://api.github.com/users/Inza/repos";
+const repoListURL = "https://api.github.com/users/";
 const repoDetailURL = "https://api.github.com/repos/Inza";
 const limit = 10;
 // const userName="Inza";
 
-export const getRepoList = ({ commit }) => {
-  axios.get(repoListURL).then((response) => {
+export const getRepoList = ({ commit }, userName) => {
+  axios.get(`${repoListURL}${userName}/repos`).then((response) => {
     commit("SET_REPO_LIST", response.data);
     console.log("list response", response.data);
   });
@@ -24,3 +25,7 @@ export const getRepoCommits = ({ commit }, repoName) => {
     console.log("commits repsonse", response.data);
   });
 };
+
+export const setUserName = ({commit}, userName) => {
+  commit("SET_USER_NAME", userName)
+}
