@@ -5,7 +5,6 @@
       {{this.repoName}}'s
       <small>details</small>
     </h3>
-    <!-- <div class="details d-flex justify-content-around"> -->
     <div class="details mx-3">
       <section class="details__branches">
         <h5>Branches</h5>
@@ -16,7 +15,7 @@
       </section>
       <section class="details__commits">
         <h5>Commit History</h5>
-        <ol>
+        <ol class="ml-1">
           <li v-for="commit in commits" :commit="commit" :key="commit.commit.author.date">
             <span>{{commit.commit.message}}</span>
             <p class="name">
@@ -33,7 +32,6 @@
 </template>
 
 <script>
-// import { mapActions } from "vuex";
 import ReturnHome from "../components/ReturnHome";
 import moment from "moment";
 
@@ -51,29 +49,23 @@ export default {
     },
     userName() {
       return this.$store.state.userName;
-    }
+    },
   },
   methods: {
-    // ...mapActions(["getRepoBranches", "getRepoCommits"]), why is this here lol
     getDate: function (date) {
       return moment(date).format("MMMM Do YYYY [at] h:mm:ss a");
     },
   },
   mounted() {
-    const payload = {repoName: this.repoName, userName: this.userName}
-    this.$store.dispatch("getRepoBranches", payload)
+    const payload = { repoName: this.repoName, userName: this.userName };
+    this.$store.dispatch("getRepoBranches", payload);
     this.$store.dispatch("getRepoCommits", payload);
-    console.log('username', this.userName)
   },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../scss/custom.scss";
-// body {
-//   background: rgb(129,178,154);
-// background: linear-gradient(0deg, rgba(129,178,154,1) 0%, rgba(61,64,91,1) 32%);
-// }
 
 h3 {
   color: $yellow;
@@ -84,34 +76,17 @@ h5 {
   border-bottom: 2px solid $green;
   text-transform: uppercase;
   margin-bottom: 0.8em;
-  // border-bottom: 0.5em solid $pink;
 }
-
 .details {
-  ol {
-    margin-left: 1em;
-  }
-  // height: 100vh;
-  // width: 100vw;
-  // background: rgb(61, 64, 91);
-  // background: linear-gradient(
-  //   0deg,
-  //   rgba(61, 64, 91, 1) 0%,
-  //   rgba(224, 122, 95, 0.6713060224089635) 33%
-  // );
+  // ol {
+  //   margin-left: 1em;
+  // }
+
   section {
     margin-bottom: 2em;
   }
 
   &__branches {
-    // width: 100vw;
-    // height: 100vh;
-    // background: rgb(61, 64, 91);
-    // background: linear-gradient(
-    //   0deg,
-    //   rgba(61, 64, 91, 1) 0%,
-    //   rgba(224, 122, 95, 0.6713060224089635) 33%
-    // );
     .branch {
       display: flex;
     }
@@ -122,15 +97,6 @@ h5 {
   }
 
   &__commits {
-    // width: 100vw;
-    // height: 100vh;
-    // background: rgb(61, 64, 91);
-    // background: linear-gradient(
-    //   0deg,
-    //   rgba(61, 64, 91, 1) 0%,
-    //   rgba(224, 122, 95, 0.6713060224089635) 33%
-    // );
-
     span {
       font-weight: bold;
     }

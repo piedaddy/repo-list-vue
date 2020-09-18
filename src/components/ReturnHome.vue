@@ -9,13 +9,11 @@ export default {
   methods: {
     returnHome() {
       return this.$router.push("/list");
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style  lang="scss">
 @import "../scss/custom.scss";
-
-
 </style>

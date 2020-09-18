@@ -13,3 +13,7 @@ export const SET_REPO_COMMITS = (state, commits) => {
 export const SET_USER_NAME = (state, userName) => {
   state.userName = userName
 }
+
+export const SET_IS_ERROR = (state, isError) => {
+  state.isError = isError
+}
