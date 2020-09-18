@@ -3,7 +3,7 @@
     <div class="search">
       <h1 class="pt-5 pb-3 text-center text-uppercase">Get Git</h1>
       <p class="mx-5">Type in any Github username</p>
-      <p class="mx-3">and find the latest information about what they've been up to!</p>
+      <p class="mx-3 mx-md-5">and find the latest information about what they've been up to!</p>
       <div class="search-input d-flex flex-column align-items-center mt-5">
         <input
           class="search-box text-center p-1 rounded"

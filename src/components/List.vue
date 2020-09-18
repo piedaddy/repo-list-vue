@@ -12,7 +12,7 @@
         <span>{{item.description}}</span>
         <p class="lang">{{ item.language ? `Written in ${item.language}`: null}}</p>
         <router-link
-          class="detail-link"
+          class="detail-link align-self-end"
           :to="{name:'detail', params: {repoName: item.name}}"
         >see details</router-link>
       </div>
@@ -82,7 +82,6 @@ h1 {
   }
 
   .detail-link {
-    align-self: flex-end;
     color: $green;
     text-decoration: none;
   }

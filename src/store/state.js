@@ -3,5 +3,5 @@ export default {
   branches: [],
   commits: [],
   userName: "",
-  isError: false
-}
+  isError: false,
+};

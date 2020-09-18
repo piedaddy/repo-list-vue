@@ -8,7 +8,7 @@
     <div class="details mx-3">
       <section class="details__branches">
         <h5>Branches</h5>
-        <div class="branch mt-2" v-for="branch in branches" :branch="branch" :key="branch.name">
+        <div class="d-flex mt-2" v-for="branch in branches" :branch="branch" :key="branch.name">
           <img src="../assests/git-branch.png" alt="git branch" />
           <p>{{branch.name}}</p>
         </div>
@@ -22,7 +22,7 @@
               <span>Authored by</span>
               {{commit.commit.author.name}}
             </p>
-            <p class="date">Last updated on {{getDate(commit.commit.author.date)}}</p>
+            <p>Last updated on <em>{{getDate(commit.commit.author.date)}}</em></p>
           </li>
         </ol>
       </section>
@@ -85,9 +85,6 @@ h5 {
   }
 
   &__branches {
-    .branch {
-      display: flex;
-    }
     img {
       width: 2em;
       height: 2em;
@@ -115,9 +112,6 @@ h5 {
         font-weight: normal;
         color: $eggshell;
       }
-    }
-    .date {
-      font-style: italic;
     }
   }
 }

@@ -1,19 +1,19 @@
 export const SET_REPO_LIST = (state, list) => {
-  state.list = list
-}
+  state.list = list;
+};
 
 export const SET_REPO_BRANCHES = (state, branches) => {
-  state.branches = branches
-}
+  state.branches = branches;
+};
 
 export const SET_REPO_COMMITS = (state, commits) => {
-  state.commits = commits
-}
+  state.commits = commits;
+};
 
 export const SET_USER_NAME = (state, userName) => {
-  state.userName = userName
-}
+  state.userName = userName;
+};
 
 export const SET_IS_ERROR = (state, isError) => {
-  state.isError = isError
-}
+  state.isError = isError;
+};

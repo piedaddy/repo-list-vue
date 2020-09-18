@@ -2,7 +2,7 @@
   <section class="about-container">
     <h2 class="mx-3 mx-md-5 text-center">About the app</h2>
     <div class="about d-flex flex-column align-items-center">
-      <Git />
+      <GitSVG />
       <div class="words ml-3 mr-2 mx-md-5 text-center">
         <p
           class="words"
@@ -16,12 +16,12 @@
 
 <script>
 import ReturnHome from "../components/ReturnHome";
-import Git from "../components/Git";
+import GitSVG from "../components/GitSVG";
 
 export default {
   components: {
     ReturnHome,
-    Git,
+    GitSVG,
   },
 };
 </script>
@@ -50,6 +50,7 @@ h2 {
     margin-top: 1em;
   }
   .words {
+    background-color: transparent;
     color: $warm-grey;
 
     @media (min-width: 768px) {
