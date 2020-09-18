@@ -1,5 +1,4 @@
 <template>
-  <!-- <div id="app" class="mx-5"> -->
   <div id="app">
     <NavBar />
     <router-view />
@@ -19,8 +18,8 @@ export default {
 <style  lang="scss">
 @import "./scss/custom.scss";
 
-// #app {
-//   width: 100vw;
-//   height: 100vh;
-// }
+#app {
+  width: 100%;
+  height: 100%;
+}
 </style>

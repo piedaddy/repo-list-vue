@@ -1,5 +1,5 @@
 <template>
-  <section class="ml-md-5">
+  <section class=" ml-md-5">
     <ReturnHome />
     <h3 class="mx-3 pb-3 mt-3 mt-md-0">
       {{this.repoName}}'s
@@ -15,7 +15,7 @@
       </section>
       <section class="details__commits">
         <h5>Commit History</h5>
-        <ol class="ml-1">
+        <ol class="ml-3">
           <li v-for="commit in commits" :commit="commit" :key="commit.commit.author.date">
             <span>{{commit.commit.message}}</span>
             <p class="name">
@@ -49,12 +49,12 @@ export default {
     },
     userName() {
       return this.$store.state.userName;
-    },
+    }
   },
   methods: {
     getDate: function (date) {
       return moment(date).format("MMMM Do YYYY [at] h:mm:ss a");
-    },
+    }
   },
   mounted() {
     const payload = { repoName: this.repoName, userName: this.userName };
@@ -77,10 +77,8 @@ h5 {
   text-transform: uppercase;
   margin-bottom: 0.8em;
 }
+
 .details {
-  // ol {
-  //   margin-left: 1em;
-  // }
 
   section {
     margin-bottom: 2em;

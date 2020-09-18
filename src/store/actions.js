@@ -51,7 +51,6 @@ export const setUserName = async ({ commit }, userName) => {
 };
 
 export const setIsError = ({ commit }, isError) => {
-  console.log("isError");
   commit("SET_IS_ERROR", isError);
 };
 

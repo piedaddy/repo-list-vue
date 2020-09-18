@@ -4,35 +4,31 @@
       <li class="nav-item">
         <router-link class="nav-item" to="/about">About</router-link>
       </li>
-      <li>
-        <router-link
-          class="nav-item"
-          to="/"
-          @click.native="setIsError(false), clearUserInfo"
-        >Search for New User</router-link>
+      <li class="nav-item">
+        <SearchNewUserLink text="Search for new user" />
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import SearchNewUserLink from "./SearchNewUserLink";
 
 export default {
-  methods: {
-    ...mapActions(["setIsError", "clearUserInfo"]),
+  components: {
+    SearchNewUserLink,
   },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../scss/custom.scss";
-// nav {
-//   width: 100vw;
-// }
 .nav-item {
   color: $green;
   font-weight: lighter;
+  @media(min-width: 768px) {
+    font-size: 1.1em;
+  }
 }
 
 .nav-item:hover {

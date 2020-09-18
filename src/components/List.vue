@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="ml-3 ml-md-5">{{this.$store.state.userName}}'s Repository List</h1>
+    <h1 class="ml-3 ml-md-5">{{userName}}'s Repository List</h1>
     <div class="list-container d-flex flex-wrap justify-content-center">
       <div
         class="list-item d-flex flex-column justify-content-between mb-2 mt-3 mx-2 p-3 col-sm-5 col-lg-3"
@@ -23,7 +23,6 @@
 <script>
 export default {
   name: "list",
-
   computed: {
     list() {
       return this.$store.state.list;
@@ -33,7 +32,6 @@ export default {
     },
   },
   mounted() {
-    console.log("error status", this.$store.state.isError);
     this.$store.dispatch("getRepoList", this.$store.state.userName);
   },
 };
@@ -58,6 +56,7 @@ h1 {
 .list-item {
   border-radius: 0.2em;
   box-shadow: 1px 1px 2px $warm-grey;
+  background-color: $warm-grey;
 
   h3 {
     height: 3em;

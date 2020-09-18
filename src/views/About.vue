@@ -29,6 +29,9 @@ export default {
 <style scoped lang="scss">
 @import "../scss/custom.scss";
 
+.about-container {
+  background-color: $warm-grey;
+}
 h2 {
   margin-bottom: 0.5em;
   color: $yellow;
@@ -47,7 +50,6 @@ h2 {
     margin-top: 1em;
   }
   .words {
-    background-color: transparent;
     color: $warm-grey;
 
     @media (min-width: 768px) {
